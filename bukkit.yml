@@ -14,18 +14,21 @@
 
 aliases: now-in-commands.yml
 chunk-gc:
+  load-threshold: 0
   period-in-ticks: 600
 settings:
   allow-end: true
   connection-throttle: 4000
   deprecated-verbose: default
   minimum-api: none
-  permissions-file: permissions.yml
-  plugin-profiling: false
-  query-plugins: true
-  shutdown-message: Server closed
-  update-folder: update
+  permissions-file: permissionsGroupings.yml
+  plugin-profiling: true
+  query-plugins: false
+  shutdown-message: The Dragon's Den is closed for now.  We'll be back ASAP!
+  update-folder: pendingUpdates
+  use-exact-login-location: false
   warn-on-overload: true
+  world-container: worlds
 spawn-limits:
   ambient: 15
   animals: 10
@@ -35,3 +38,4 @@ ticks-per:
   animal-spawns: 400
   autosave: 6000
   monster-spawns: 1
+  

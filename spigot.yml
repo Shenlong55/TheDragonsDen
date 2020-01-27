@@ -20,9 +20,9 @@ commands:
   replace-commands:
   - setblock
   - summon
-  - testforblock
   - tellraw
-  send-namespaced: true
+  - testforblock
+  send-namespaced: false
   silent-commandblock-console: false
   spam-exclusions:
   - /skill
@@ -36,20 +36,23 @@ messages:
   whitelist: You are not whitelisted on this server!
 settings:
   attribute:
+    attackDamage:
+      max: 2048.0
     maxHealth:
       max: 2048.0
     movementSpeed:
       max: 2048.0
-    attackDamage:
-      max: 2048.0
   bungeecord: false
   debug: false
+  filter-creative-items: true
+  item-dirty-ticks: 20
+  late-bind: true
   log-villager-deaths: true
-  moved-wrongly-threshold: 0.0625
   moved-too-quickly-multiplier: 10.0
+  moved-wrongly-threshold: 0.0625
   netty-threads: 4
   player-shuffle: 0
-  restart-on-crash: true
+  restart-on-crash: false
   restart-script: ./start.sh
   sample-count: 12
   save-user-cache-on-stop-only: false
@@ -61,6 +64,7 @@ stats:
 world-settings:
   default:
     arrow-despawn-rate: 1200
+    clear-tick-list: false
     dragon-death-sound-radius: 0
     enable-zombie-pigmen-portal-spawns: true
     entity-activation-range:
@@ -103,6 +107,7 @@ world-settings:
       sprint-multiplier: 0.1
       swim-multiplier: 0.01
     item-despawn-rate: 6000
+    max-entity-collisions: 8
     max-tick-time:
       entity: 50
       tile: 50
@@ -112,7 +117,10 @@ world-settings:
       item: 2.5
     mob-spawn-range: 6
     nerf-spawner-mobs: false
+    random-light-updates: true
+    save-structure-info: true
     seed-desert: 14357617
+    seed-feature: 14357617
     seed-igloo: 14357618
     seed-jungle: 14357619
     seed-monument: 10387313
@@ -128,7 +136,7 @@ world-settings:
       hopper-check: 1
       hopper-transfer: 8
     trident-despawn-rate: 1200
-    verbose: true
+    verbose: false
     view-distance: default
     wither-spawn-sound-radius: 0
     zombie-aggressive-towards-villager: true
