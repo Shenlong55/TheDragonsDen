@@ -38,7 +38,7 @@ settings:
     tab-spam-increment: 1
     tab-spam-limit: 500
   suggest-player-names-when-null-tab-completions: true
-  use-alternative-luck-formula: false
+  use-alternative-luck-formula: true
   velocity-support:
     enabled: false
     online-mode: false
@@ -67,7 +67,7 @@ world-settings:
         COBBLESTONE: 300
     anti-xray:
       chunk-edge-mode: 2
-      enabled: false
+      enabled: true
       engine-mode: 1
       hidden-blocks:
       - gold_ore
@@ -122,7 +122,7 @@ world-settings:
       enabled: true
     game-mechanics:
       disable-chest-cat-detection: false
-      disable-end-credits: false
+      disable-end-credits: true
       disable-pillager-patrols: false
       disable-player-crits: false
       disable-relative-projectile-velocity: false
@@ -131,7 +131,7 @@ world-settings:
       scan-for-legacy-ender-dragon: true
       shield-blocking-delay: 5
     generator-settings:
-      flat-bedrock: false
+      flat-bedrock: true
     grass-spread-tick-rate: 1
     hopper:
       cooldown-when-full: true
@@ -143,10 +143,10 @@ world-settings:
       impact-sound: -1
       sound: -1
     lootables:
-      auto-replenish: false
+      auto-replenish: true
       max-refills: -1
-      refresh-max: 2d
-      refresh-min: 12h
+      refresh-max: 7d
+      refresh-min: 24h
       reset-seed-on-fill: true
       restrict-player-reloot: true
     max-auto-save-chunks-per-tick: 24
@@ -158,7 +158,7 @@ world-settings:
     nether-ceiling-void-damage-height: 0
     non-player-arrow-despawn-rate: -1
     optimize-explosions: false
-    parrots-are-unaffected-by-player-movement: false
+    parrots-are-unaffected-by-player-movement: true
     per-player-mob-spawns: false
     portal-create-radius: 16
     portal-search-radius: 128
@@ -171,7 +171,7 @@ world-settings:
     squid-spawn-height:
       maximum: 0.0
     tnt-entity-height-nerf: 0
-    treasure-maps-return-already-discovered: false
+    treasure-maps-return-already-discovered: true
     use-faster-eigencraft-redstone: false
     use-vanilla-world-scoreboard-name-coloring: false
     water-over-lava-flow-speed: 5
