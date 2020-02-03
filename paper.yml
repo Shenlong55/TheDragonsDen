@@ -68,7 +68,7 @@ world-settings:
     anti-xray:
       chunk-edge-mode: 2
       enabled: true
-      engine-mode: 1
+      engine-mode: 2
       hidden-blocks:
       - gold_ore
       - iron_ore
@@ -88,16 +88,16 @@ world-settings:
       - oak_planks
       update-radius: 2
     armor-stands-do-collision-entity-lookups: true
-    armor-stands-tick: true
+    armor-stands-tick: false
     auto-save-interval: -1
     baby-zombie-movement-modifier: 0.5
     bed-search-radius: 1
-    container-update-tick-rate: 1
+    container-update-tick-rate: 4
     count-all-mobs-for-spawning: false
-    creative-arrow-despawn-rate: -1
+    creative-arrow-despawn-rate: 60
     despawn-ranges:
-      hard: 128
-      soft: 32
+      hard: 96
+      soft: 28
     disable-creeper-lingering-effect: false
     disable-explosion-knockback: false
     disable-ice-and-snow: false
@@ -132,7 +132,7 @@ world-settings:
       shield-blocking-delay: 5
     generator-settings:
       flat-bedrock: true
-    grass-spread-tick-rate: 1
+    grass-spread-tick-rate: 4
     hopper:
       cooldown-when-full: true
       disable-move-event: false
@@ -149,20 +149,20 @@ world-settings:
       refresh-min: 24h
       reset-seed-on-fill: true
       restrict-player-reloot: true
-    max-auto-save-chunks-per-tick: 24
-    max-entity-collisions: 8
+    max-auto-save-chunks-per-tick: 8
+    max-entity-collisions: 2
     max-growth-height:
       cactus: 3
       reeds: 3
-    mob-spawner-tick-rate: 1
+    mob-spawner-tick-rate: 2
     nether-ceiling-void-damage-height: 0
     non-player-arrow-despawn-rate: -1
-    optimize-explosions: false
+    optimize-explosions: true
     parrots-are-unaffected-by-player-movement: true
-    per-player-mob-spawns: false
+    per-player-mob-spawns: true
     portal-create-radius: 16
     portal-search-radius: 128
-    prevent-moving-into-unloaded-chunks: false
+    prevent-moving-into-unloaded-chunks: true
     prevent-tnt-from-moving-in-water: false
     remove-corrupt-tile-entities: false
     seed-based-feature-search: true
@@ -172,6 +172,54 @@ world-settings:
       maximum: 0.0
     tnt-entity-height-nerf: 0
     treasure-maps-return-already-discovered: true
-    use-faster-eigencraft-redstone: false
+    use-faster-eigencraft-redstone: true
     use-vanilla-world-scoreboard-name-coloring: false
     water-over-lava-flow-speed: 5
+  Krynn_nether:
+    anti-xray:
+      chunk-edge-mode: 2
+      enabled: false
+      engine-mode: 2
+      hidden-blocks:
+      - gold_ore
+      - iron_ore
+      - coal_ore
+      - lapis_ore
+      - mossy_cobblestone
+      - obsidian
+      - chest
+      - diamond_ore
+      - redstone_ore
+      - clay
+      - emerald_ore
+      - ender_chest
+      max-chunk-section-index: 3
+      replacement-blocks:
+      - stone
+      - oak_planks
+      update-radius: 2
+    keep-spawn-loaded: false
+  Krynn_the_end:
+    anti-xray:
+      chunk-edge-mode: 2
+      enabled: false
+      engine-mode: 2
+      hidden-blocks:
+      - gold_ore
+      - iron_ore
+      - coal_ore
+      - lapis_ore
+      - mossy_cobblestone
+      - obsidian
+      - chest
+      - diamond_ore
+      - redstone_ore
+      - clay
+      - emerald_ore
+      - ender_chest
+      max-chunk-section-index: 3
+      replacement-blocks:
+      - stone
+      - oak_planks
+      update-radius: 2
+    keep-spawn-loaded: false
