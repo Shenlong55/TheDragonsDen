@@ -1,7 +1,12 @@
 /cache
+/logs
 /banned-ips.json
 /banned-players.json
+/commands.yml
+/eula.yml
+/help.yml
 /ops.json
+/permissionsGroupings.yml
 /*.jar
 /usercache.json
 /version_history.json
