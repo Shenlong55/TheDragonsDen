@@ -1,4 +1,6 @@
-on: push
+on:
+  schedule:
+    - cron:  '35 8 * * *'
 name: Publish Server
 jobs:
   FTP-Deploy-Action:
