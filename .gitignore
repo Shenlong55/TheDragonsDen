@@ -1,5 +1,7 @@
-/usercache.json
+/cache
 /banned-ips.json
 /banned-players.json
 /ops.json
+/usercache.json
+/version_history.json
 /whitelist.json

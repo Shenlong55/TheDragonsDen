@@ -1,0 +1,22 @@
+{
+  "pattern": [
+      "LL ",
+      "LI ",
+      "  S"
+    ],
+  "type"   : "crafting_shaped",
+  "result" : {
+      "item": "minecraft:lead"
+    },
+  "key"    : {
+      "L": {
+          "item": "minecraft:leather"
+        },
+      "I": {
+          "item": "minecraft:iron_ingot"
+        },
+      "S": {
+          "item": "minecraft:string"
+        }
+    }
+}
