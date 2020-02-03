@@ -14,4 +14,4 @@ jobs:
         FTP_SERVER: 192.227.173.130
         FTP_USERNAME: shenlong55.50052
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        ARGS: --exclude-glob=.git*/** --exclude-glob=.git** --delete
+        ARGS: --exclude-glob=.git*/** --exclude-glob=.git**
