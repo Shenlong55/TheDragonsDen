@@ -136,7 +136,7 @@ world-settings:
     hopper:
       cooldown-when-full: true
       disable-move-event: false
-    keep-spawn-loaded: true
+    keep-spawn-loaded: false
     keep-spawn-loaded-range: 10
     lightning-strike-distance-limit:
       flash: -1
