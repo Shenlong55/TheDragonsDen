@@ -128,6 +128,7 @@ world-settings:
       disable-relative-projectile-velocity: false
       disable-sprint-interruption-on-attack: false
       disable-unloaded-chunk-enderpearl-exploit: true
+      nerf-pigmen-from-nether-portals: false
       scan-for-legacy-ender-dragon: true
       shield-blocking-delay: 5
     generator-settings:
@@ -136,7 +137,8 @@ world-settings:
     hopper:
       cooldown-when-full: true
       disable-move-event: false
-    keep-spawn-loaded: true
+    iron-golems-can-spawn-in-air: false
+    keep-spawn-loaded: false
     keep-spawn-loaded-range: 10
     lightning-strike-distance-limit:
       flash: -1
@@ -175,6 +177,7 @@ world-settings:
     use-faster-eigencraft-redstone: true
     use-vanilla-world-scoreboard-name-coloring: false
     water-over-lava-flow-speed: 5
+    zombie-villager-infection-chance: -1.0
   Krynn_nether:
     anti-xray:
       chunk-edge-mode: 2
