@@ -51,6 +51,7 @@ timings:
   hidden-config-entries:
   - database
   - settings.bungeecord-addresses
+  - settings.velocity-support.secret
   history-interval: 300
   history-length: 3600
   server-name: Unknown Server
@@ -129,6 +130,14 @@ world-settings:
       disable-sprint-interruption-on-attack: false
       disable-unloaded-chunk-enderpearl-exploit: true
       nerf-pigmen-from-nether-portals: false
+      pillager-patrols:
+        spawn-chance: 0.2
+        spawn-delay:
+          per-player: false
+          ticks: 12000
+        start:
+          day: 5
+          per-player: false
       scan-for-legacy-ender-dragon: true
       shield-blocking-delay: 5
     generator-settings:
@@ -144,6 +153,7 @@ world-settings:
       flash: -1
       impact-sound: -1
       sound: -1
+    light-queue-size: 20
     lootables:
       auto-replenish: true
       max-refills: -1
@@ -173,6 +183,7 @@ world-settings:
     squid-spawn-height:
       maximum: 0.0
     tnt-entity-height-nerf: 0
+    tracker-update-distance: 1.0
     treasure-maps-return-already-discovered: true
     use-faster-eigencraft-redstone: true
     use-vanilla-world-scoreboard-name-coloring: false

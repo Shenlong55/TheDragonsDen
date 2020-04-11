@@ -121,6 +121,7 @@ world-settings:
     random-light-updates: true
     save-structure-info: true
     seed-desert: 14357617
+    seed-endcity: 10387313
     seed-feature: 14357617
     seed-igloo: 14357618
     seed-jungle: 14357619
