@@ -202,7 +202,7 @@ world-settings:
     use-faster-eigencraft-redstone: true
     use-vanilla-world-scoreboard-name-coloring: false
     viewdistances:
-      no-tick-view-distance: -1
+      no-tick-view-distance: 16
     water-over-lava-flow-speed: 5
     zombie-villager-infection-chance: -1.0
   Krynn_nether:
