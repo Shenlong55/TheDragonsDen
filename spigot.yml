@@ -166,3 +166,5 @@ world-settings:
     view-distance: default
     wither-spawn-sound-radius: 0
     zombie-aggressive-towards-villager: true
+  worldeditregentempworld:
+    verbose: false
