@@ -32,7 +32,7 @@ use-player-teleports: true
 use-particle-effects: true
 security:
     deop-everyone-on-join: true
-    block-in-game-op-command: false
+    block-in-game-op-command: true
     host-keys-allow-forge-clients: false
 host-keys: {}
 summary-on-start: false
@@ -48,7 +48,7 @@ event-handling:
     break-hoppers-on-denied-move: true
 protection:
     item-durability: true
-    remove-infinite-stacks: false
+    remove-infinite-stacks: true
     disable-xp-orb-drops: false
     disable-obsidian-generators: false
 gameplay:
