@@ -44,37 +44,37 @@ cuboid-top-bottom: true
 visualization:
   selection:
     fade-delay: 0
-    max-selection-size: 50000
+    max-selection-size: 589824
     primary:
       points-distance: 0.5
-      update-interval: 10
-      view-distance: 64
-      particles:
-        type: "FLAME"
-        data: ""
-    secondary:
-      points-distance: 1.0
-      lines-gap: 2.0
       update-interval: 20
       view-distance: 64
       particles:
         type: "REDSTONE"
         data: "RED"
-  clipboard:
-    fade-delay: 0
-    max-selection-size: 50000
-    primary:
-      points-distance: 1.0
-      update-interval: 10
-      view-distance: 64
-      particles:
-        type: "FLAME"
-        data: ""
     secondary:
       points-distance: 2.0
       lines-gap: 2.0
+      update-interval: 20
+      view-distance: 32
+      particles:
+        type: "REDSTONE"
+        data: "BLUE"
+  clipboard:
+    fade-delay: 0
+    max-selection-size: 589824
+    primary:
+      points-distance: 1.0
       update-interval: 20
       view-distance: 64
       particles:
         type: "REDSTONE"
         data: "BLUE"
+    secondary:
+      points-distance: 2.0
+      lines-gap: 2.0
+      update-interval: 20
+      view-distance: 32
+      particles:
+        type: "REDSTONE"
+        data: "RED"
