@@ -1,7 +1,7 @@
 # WorldEditSelectionVisualizer configuration
 
 # When enabled, if a new update is available it will display a message in the console on start
-check-updates: true
+check-updates: false
 
 # You can edit the plugin messages here
 messages:
