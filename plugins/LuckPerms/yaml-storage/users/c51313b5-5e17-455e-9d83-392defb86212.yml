@@ -1,0 +1,7 @@
+uuid: c51313b5-5e17-455e-9d83-392defb86212
+name: Shenlong55
+primary-group: default
+permissions:
+- luckperms.*
+parents:
+- default

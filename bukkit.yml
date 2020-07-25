@@ -28,15 +28,16 @@ settings:
   update-folder: pendingUpdates
   use-exact-login-location: false
   warn-on-overload: true
-  world-container: worlds
 spawn-limits:
   ambient: 15
   animals: 10
   monsters: 70
+  water-ambient: 15
   water-animals: 15
 ticks-per:
-  ambient-spawns: 1
+  ambient-spawns: 4
   animal-spawns: 400
   autosave: 6000
   monster-spawns: 2
-  water-spawns: 1
+  water-ambient-spawns: 4
+  water-spawns: 4

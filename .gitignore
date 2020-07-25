@@ -1,5 +1,8 @@
 /cache
+/dev-worlds
 /logs
+/.console_history
+/*.jar
 /banned-ips.json
 /banned-players.json
 /commands.yml
@@ -7,7 +10,6 @@
 /help.yml
 /ops.json
 /permissionsGroupings.yml
-/*.jar
 /usercache.json
 /version_history.json
 /whitelist.json

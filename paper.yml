@@ -23,11 +23,13 @@ messages:
 settings:
   async-chunks:
     enable: true
-    load-threads: -1
+    threads: -1
   book-size:
     page-max: 2560
     total-multiplier: 0.98
   bungee-online-mode: true
+  chunk-tasks-per-tick: 1000
+  console-has-all-permissions: true
   enable-player-collisions: true
   incoming-packet-spam-threshold: 300
   load-permissions-yml-before-plugins: true
@@ -38,6 +40,15 @@ settings:
     tab-spam-increment: 1
     tab-spam-limit: 500
   suggest-player-names-when-null-tab-completions: true
+  unsupported-settings:
+    allow-permanent-block-break-exploits: false
+    allow-permanent-block-break-exploits-readme: This setting controls if players
+      should be able to break bedrock, end portals and other intended to be permanent
+      blocks.
+    allow-piston-duplication: false
+    allow-piston-duplication-readme: This setting controls if player should be able
+      to use TNT duplication, but this also allows duplicating carpet, rails and potentially
+      other items
   use-alternative-luck-formula: true
   velocity-support:
     enabled: false
@@ -51,6 +62,7 @@ timings:
   hidden-config-entries:
   - database
   - settings.bungeecord-addresses
+  - settings.velocity-support.secret
   history-interval: 300
   history-length: 3600
   server-name: Unknown Server
@@ -95,6 +107,7 @@ world-settings:
     container-update-tick-rate: 4
     count-all-mobs-for-spawning: false
     creative-arrow-despawn-rate: 60
+    delay-chunk-unloads-by: 10s
     despawn-ranges:
       hard: 96
       soft: 28
@@ -129,6 +142,14 @@ world-settings:
       disable-sprint-interruption-on-attack: false
       disable-unloaded-chunk-enderpearl-exploit: true
       nerf-pigmen-from-nether-portals: false
+      pillager-patrols:
+        spawn-chance: 0.2
+        spawn-delay:
+          per-player: false
+          ticks: 12000
+        start:
+          day: 5
+          per-player: false
       scan-for-legacy-ender-dragon: true
       shield-blocking-delay: 5
     generator-settings:
@@ -144,6 +165,7 @@ world-settings:
       flash: -1
       impact-sound: -1
       sound: -1
+    light-queue-size: 20
     lootables:
       auto-replenish: true
       max-refills: -1
@@ -162,6 +184,8 @@ world-settings:
     optimize-explosions: true
     parrots-are-unaffected-by-player-movement: true
     per-player-mob-spawns: true
+    phantoms-do-not-spawn-on-creative-players: true
+    phantoms-only-attack-insomniacs: true
     portal-create-radius: 16
     portal-search-radius: 128
     prevent-moving-into-unloaded-chunks: true
@@ -173,9 +197,12 @@ world-settings:
     squid-spawn-height:
       maximum: 0.0
     tnt-entity-height-nerf: 0
+    tracker-update-distance: 1.0
     treasure-maps-return-already-discovered: true
     use-faster-eigencraft-redstone: true
     use-vanilla-world-scoreboard-name-coloring: false
+    viewdistances:
+      no-tick-view-distance: 16
     water-over-lava-flow-speed: 5
     zombie-villager-infection-chance: -1.0
   Krynn_nether:
