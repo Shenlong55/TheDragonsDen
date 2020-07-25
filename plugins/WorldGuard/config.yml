@@ -19,11 +19,11 @@ regions:
     high-frequency-flags: false
     protect-against-liquid-flow: false
     wand: minecraft:leather
-    max-claim-volume: 30000
+    max-claim-volume: 589824
     claim-only-inside-existing-regions: false
     location-flags-only-inside-regions: false
     max-region-count-per-player:
-        default: 7
+        default: 3
 auto-invincible: false
 auto-invincible-group: false
 auto-no-drowning-group: false
