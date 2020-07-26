@@ -12,7 +12,7 @@
 regions:
     __global__:
         members: {}
-        flags: {passthrough: deny, interact: allow}
+        flags: {passthrough: deny, interact: allow, damage-animals: allow}
         owners: {}
         type: global
         priority: 0
