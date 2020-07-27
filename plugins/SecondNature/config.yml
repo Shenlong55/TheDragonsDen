@@ -1,0 +1,71 @@
+############################################################
+# +------------------------------------------------------+ #
+# |           SecondNature Configuration File            | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Author: Dan Negura (dan.negura@icloud.com)
+
+############################################################
+# +------------------------------------------------------+ #
+# |              Background Reforestation                | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Background Reforestation runs continuously in the background and adds
+# fauna to regions of the world populated with players.
+
+background-reforestation:
+
+  enabled-on-worlds:
+    - 'disabled'
+
+  # effect-range: the range in blocks around players where the fauna
+  # gets restored.
+  effect-range: 50
+
+  # growth-rate: number of trees planted per hour per person
+  # online. Smallest possible value is 0 and maximum is commonsense. ;)
+  growth-rate: 2
+
+  # vegetation-type: defines the type of vegetation that is planted with the
+  # background forestation tool. 
+  # Available values:
+  #
+  # - 'adaptive' respects local biomes, recommended for natural looking worlds
+  # - 'oak'
+  # - 'birch'
+  # - 'spruce'
+  # - 'acacia'
+  # - 'jungle'
+  # - 'darkoak'
+  vegetation-type: 'adaptive'
+
+  # grown-trees: if set to false the plugin will place saplings instead of trees.
+  grown-trees: true
+  
+  # enable-grass: the placement of grass, tall-grass, and flowers along with trees.
+  enable-grass: true
+
+############################################################
+# +------------------------------------------------------+ #
+# |                  On-Demand Forests                   | #
+# +------------------------------------------------------+ #
+############################################################
+
+# On-Demand allows the creation of forests using commands and saplings in-game.
+
+on-demand:
+  
+  # maximum-rate: the maximum forest-growth speed players can set in-game,
+  # measured in trees/minute.
+  max-trees-per-minute: 1200
+
+  # max-radius: the maximum radius around a forestation block setting players
+  # can set in-game.
+  max-radius: 200
+
+
+# Do not change the config-version.
+config-version: '1.0'
+# [END OF FILE]
