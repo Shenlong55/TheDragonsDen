@@ -1,0 +1,71 @@
+# Block to replace if an override isn't specified
+global-replace-block: 'BEDROCK'
+
+# Should all blocks in the block list regen, even if they aren't in a region?
+global-block-regen: false
+
+# Worlds in the blacklist aren't affect by global regen, only region-based regen
+global-regen-blacklist:
+  - 'blacklisted-world'
+
+# Should block break be cancelled in regions if they aren't in the block list?
+# Recommended setting this to false if using global block regen
+cancel-non-blocks: true
+
+# Should trampling farmland in regions be stopped?
+cancel-block-trample: true
+
+# Add the block name, delay, and replace block that you want to be regenerated
+# Note: You can use 'AIR' to replace the block with nothing
+blocks:
+  coal_ore:
+    delay: 5
+    replace-block: 'COBBLESTONE'
+  iron_ore:
+    delay: 15
+  gold_ore:
+    delay: 30
+  lapis_ore:
+    delay: 45
+  redstone_ore:
+    delay: 30
+  glowing_redstone_ore:
+    delay: 30
+  diamond_ore:
+    delay: 60
+  emerald_ore:
+    delay: 60
+  nether_quartz_ore:
+    delay: 30
+  #tube_coral_fan:
+  #  delay: 30
+  #diamond_block:
+  #  delay: 60
+  #  rewards:
+  #    chance: 10
+  #    commands:
+  #      - "eco give %player% 1000"
+  #    items:
+  #      1:
+  #        type: 'diamond_sword'
+  #        name: '&6Holy Sword'
+  #        lore:
+  #          - "&eA sword of gods"
+  #        amount: 1
+  #        enchants:
+  #          - 'sharpness:8'
+  #    messages:
+  #      - "&aEnjoy the rewards!"
+
+# Set to true for block drops to automatically be put in the player's inventory
+auto-inventory: false
+
+# Worldguard regions that disallow mining
+# Enter the region name to disable
+worldguard-disabled-regions:
+  - 'example'
+
+# Worldguard regions that you bypass breaking ores in
+# Enter the region name to bypass it
+worldguard-bypass-regions:
+  - 'testing'
