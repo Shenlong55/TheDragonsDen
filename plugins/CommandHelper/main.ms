@@ -44,7 +44,7 @@ register_command('plotclaim', array('description': 'claim a plot.',
                                 'noPermMsg': 'You do not have permission to claim a plot.',
                                 'executor': closure(@alias, @sender, @args) {
                                     if(array_size(@args) > 0) {
-                                        sudo('/rg claim '.@args[0]);
+                                        run('/rg claim '.@args[0]);
                                         sudo('//desel');
                                         
                                         return(true);
