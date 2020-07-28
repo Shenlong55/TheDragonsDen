@@ -10,9 +10,22 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
-    __global__:
+    villageoutskirts:
+        min: {x: 49, y: 0, z: 159}
+        max: {x: 351, y: 255, z: 464}
         members: {}
-        flags: {passthrough: deny, interact: allow, damage-animals: allow}
+        flags: {}
+        owners: {}
+        type: cuboid
+        priority: 0
+    wilderness:
+        members: {}
+        flags:
+            allow-block-break: [GRASS, TALL_GRASS, TORCH, WALL_TORCH]
+            passthrough: deny
+            damage-animals: allow
+            interact: allow
+            allow-block-place: [TORCH, WALL_TORCH]
         owners: {}
         type: global
         priority: 0
