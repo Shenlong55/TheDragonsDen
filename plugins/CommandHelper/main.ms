@@ -48,6 +48,7 @@ register_command('plotclaim', array('description': 'claim a plot.',
                                     if(array_size(@args) > 0)
                                     {
                                         run('/rg claim '.@args[0]);
+                                        runas('~console', '/rg setparent '.@args[0].' plot_template')
                                         sudo('//desel');
                                         return(true);
                                     }
