@@ -26,13 +26,14 @@
 register_command('plotselect', array('description': 'Select a plot.',
                                 'usage': '/plotselect',
                                 'noPermMsg': 'You do not have permission to select a plot.',
-                                'executor': closure(@alias, @sender, @args) {
-                                    if(array_size(@args) < 1) {
+                                'executor': closure(@alias, @sender, @args)
+                                {
+                                    if(array_size(@args) < 1)
+                                    {
                                         sudo('//chunk');
                                         sudo('//expand 1 n,e,s,w');
                                         sudo('//chunk -s');
                                         msg(colorize('&aPlot selected.  If you are happy with your selection use /plotclaim <plotName> to claim this land as your own.'));
-                                        
                                         return(true);
                                     }
                                     return(false); // prints usage
@@ -42,13 +43,35 @@ register_command('plotselect', array('description': 'Select a plot.',
 register_command('plotclaim', array('description': 'claim a plot.',
                                 'usage': '/plotclaim <plotName>',
                                 'noPermMsg': 'You do not have permission to claim a plot.',
-                                'executor': closure(@alias, @sender, @args) {
-                                    if(array_size(@args) > 0) {
+                                'executor': closure(@alias, @sender, @args)
+                                {
+                                    if(array_size(@args) > 0)
+                                    {
                                         run('/rg claim '.@args[0]);
                                         sudo('//desel');
-                                        
                                         return(true);
                                     }
                                     return(false); // prints usage
+                                }
+                            ));
+                         
+register_command('wgbypass', array('description': 'Temporarily bypass WorldGuard protections.',
+                                'usage': '/wgbypass <duration>',
+                                'permission': 'dragonsden.admin.wgbypass',
+                                'executor': closure(@alias, @sender, @args)
+                                {
+                                    if(array_size(@args) > 1)
+                                    {
+                                        return(false); // prints usage
+                                    }
+                                    else if(array_size(@args) > 0)
+                                    {
+                                        runas('~console', '/lp user '.@sender.' permission settemp worldguard.region.bypass.* true '.@args[0].' deny');
+                                    }
+                                    else
+                                    {
+                                        runas('~console', '/lp user '.@sender.' permission settemp worldguard.region.bypass.* true 1m deny');
+                                    }
+                                    return(true);
                                 }
                             ));

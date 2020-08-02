@@ -1,5 +1,6 @@
 name: admin
 permissions:
+- dragonsden.admin.wgbypass
 - minecraft.command.enchant
 - minecraft.command.experience
 - minecraft.command.give
