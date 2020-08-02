@@ -1,0 +1,12 @@
+name: admin
+permissions:
+- minecraft.command.enchant
+- minecraft.command.experience
+- minecraft.command.give
+- minecraft.command.locate
+- minecraft.command.locatebiome
+- minecraft.command.recipe
+- minecraft.command.spawnpoint
+- minecraft.command.teleport
+parents:
+- default

@@ -4,4 +4,4 @@ primary-group: default
 permissions:
 - luckperms.*
 parents:
-- default
+- admin
