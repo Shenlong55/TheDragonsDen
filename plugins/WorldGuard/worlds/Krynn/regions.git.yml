@@ -10,14 +10,6 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
-    villageoutskirts:
-        min: {x: 49, y: 0, z: 159}
-        max: {x: 351, y: 255, z: 464}
-        members: {}
-        flags: {}
-        owners: {}
-        type: cuboid
-        priority: 0
     __global__:
         members: {}
         flags:
@@ -28,4 +20,18 @@ regions:
             allow-block-place: [AIR, CAKE, CAMPFIRE, LADDER, LANTERN, LEAD, SCAFFOLDING, TORCH, VINE, WALL_TORCH, WATER]
         owners: {}
         type: global
+        priority: 0
+    plot_template:
+        members: {}
+        flags: {block-respawn: deny}
+        owners: {}
+        type: global
+        priority: 0
+    villageoutskirts:
+        min: {x: 49, y: 0, z: 159}
+        max: {x: 351, y: 255, z: 464}
+        members: {}
+        flags: {}
+        owners: {}
+        type: cuboid
         priority: 0
