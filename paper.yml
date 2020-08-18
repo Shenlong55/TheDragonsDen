@@ -33,6 +33,8 @@ settings:
   enable-player-collisions: true
   incoming-packet-spam-threshold: 300
   load-permissions-yml-before-plugins: true
+  max-player-auto-save-per-tick: -1
+  player-auto-save-rate: -1
   region-file-cache-size: 256
   save-empty-scoreboard-teams: false
   save-player-data: true
