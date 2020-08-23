@@ -1,15 +1,15 @@
 debug: false
 BlockRespawner:
-  Enabled: false
+  Enabled: true
   SyncVeinRespawn: true
-  WGFlag: false
+  WGFlag: true
 PlantPropagator:
-  Enabled: false
+  Enabled: true
   AttemptsPerDay: 4
   NewGrowthSpreadRange: 64
   OriginPlantSearchRange: 64
 AutoPlanter:
-  Enabled: false
+  Enabled: true
   Saplings:
     Enabled: true
     AvoidOvercrowding: true
