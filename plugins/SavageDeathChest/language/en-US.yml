@@ -43,7 +43,7 @@ TIME_STRINGS:
 MESSAGES:
   CHEST_SUCCESS:
     enabled: true
-    string: '&cSuccessfully placed death chest. You have %DURATION% to retrieve your items.'
+    string: '&cDeath chest placed at [%LOC_X%, %LOC_Y%, %LOC_Z%] will expire in %DURATION%.'
     # available subs: %PLAYER%, %DURATION%, %LOCATION%
 
   DOUBLECHEST_PARTIAL_SUCCESS:

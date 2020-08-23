@@ -51,7 +51,7 @@ search-distance: 10
 place-above-void: true
 
 # Time in minutes before death chests expire. Set to 0 (zero) to disable chest expiration.
-expire-time: 0
+expire-time: 5040
 
 # Allow quick-looting of chests with sneak-punch
 quick-loot: true
