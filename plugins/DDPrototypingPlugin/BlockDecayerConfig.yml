@@ -1,0 +1,8 @@
+BlockTypes:
+  Campfire: 7d
+  Crafting_Table: 7d
+  Ladder: 7d
+  Lantern: 7d
+  Scaffolding: 7d
+  Torch: 7d
+  Wall_Torch: 7d

@@ -1,8 +1,10 @@
 debug: false
+Climbing: true
 BlockRespawner:
   Enabled: true
   SyncVeinRespawn: true
-  WGFlag: true
+  WGFlag: false
+BlockDecayer: true
 PlantPropagator:
   Enabled: true
   AttemptsPerDay: 4
