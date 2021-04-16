@@ -18,3 +18,10 @@ bypass-list-uuids: []
 fill-memory-tolerance: 500
 prevent-block-place: false
 prevent-mob-spawn: false
+worlds:
+  Krynn:
+    x: 0.0
+    z: 0.0
+    radiusX: 4000
+    radiusZ: 4000
+    wrapping: false
