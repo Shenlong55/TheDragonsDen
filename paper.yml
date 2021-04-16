@@ -154,7 +154,7 @@ world-settings:
       MaximumTicks: 600
       MinimumTicks: 100
     fix-climbing-bypassing-cramming-rule: false
-    fix-wither-targeting-bug: false
+    fix-wither-targeting-bug: true
     fix-zero-tick-instant-grow-farms: true
     fixed-chunk-inhabited-time: -1
     frosted-ice:
@@ -240,7 +240,7 @@ world-settings:
     tnt-entity-height-nerf: 0
     tracker-update-distance: 1.0
     treasure-maps-return-already-discovered: true
-    update-pathfinding-on-block-update: true
+    update-pathfinding-on-block-update: false
     use-faster-eigencraft-redstone: true
     use-vanilla-world-scoreboard-name-coloring: false
     viewdistances:
