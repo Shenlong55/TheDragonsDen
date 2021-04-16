@@ -6,7 +6,7 @@ BlockRespawner:
   WGFlag: false
 BlockDecayer: true
 PlantPropagator:
-  Enabled: true
+  Enabled: false
   AttemptsPerDay: 4
   NewGrowthSpreadRange: 64
   OriginPlantSearchRange: 64
