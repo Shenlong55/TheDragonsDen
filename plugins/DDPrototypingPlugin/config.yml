@@ -4,7 +4,9 @@ BlockRespawner:
   Enabled: true
   SyncVeinRespawn: true
   WGFlag: false
-BlockDecayer: true
+BlockDecayer:
+  Enabled: true
+  WGFlag: true
 PlantPropagator:
   Enabled: false
   AttemptsPerDay: 4
