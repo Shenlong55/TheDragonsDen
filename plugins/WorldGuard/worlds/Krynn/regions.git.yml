@@ -23,3 +23,9 @@ regions:
         owners: {}
         priority: 0
         type: global
+    personal_plot_template:
+        flags: {block-decay: deny}
+        members: {}
+        owners: {}
+        type: global
+        priority: 0
