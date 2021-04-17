@@ -75,7 +75,7 @@ world-settings:
       flying-monsters: 32
       misc: 8
       monsters: 32
-      raiders: 48
+      raiders: 32
       tick-inactive-villagers: false
       villagers: 32
       villagers-active-for-panic: true
