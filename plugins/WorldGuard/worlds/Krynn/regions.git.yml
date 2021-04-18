@@ -21,6 +21,8 @@ regions:
             greeting-title: Wilderness
             interact: allow
             passthrough: deny
+            vehicle-destroy: allow
+            vehicle-place: allow
         members: {}
         owners: {}
         priority: 0
