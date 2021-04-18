@@ -18,6 +18,7 @@ regions:
             chest-access: allow
             damage-animals: allow
             deny-message: ''
+            greeting-title: Wilderness
             interact: allow
             passthrough: deny
         members: {}
