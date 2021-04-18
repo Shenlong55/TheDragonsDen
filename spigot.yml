@@ -65,17 +65,17 @@ stats:
   forced-stats: {}
 world-settings:
   default:
-    arrow-despawn-rate: 600
+    arrow-despawn-rate: 1200
     clear-tick-list: false
     dragon-death-sound-radius: 0
     enable-zombie-pigmen-portal-spawns: true
     end-portal-sound-radius: 0
     entity-activation-range:
-      animals: 24
-      flying-monsters: 32
+      animals: 16
+      flying-monsters: 24
       misc: 8
-      monsters: 32
-      raiders: 32
+      monsters: 24
+      raiders: 48
       tick-inactive-villagers: false
       villagers: 32
       villagers-active-for-panic: true
