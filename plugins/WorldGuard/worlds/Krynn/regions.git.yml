@@ -17,6 +17,7 @@ regions:
             block-respawn: allow
             chest-access: allow
             damage-animals: allow
+            deny-message: ''
             interact: allow
             passthrough: deny
         members: {}
@@ -27,5 +28,5 @@ regions:
         flags: {block-decay: deny}
         members: {}
         owners: {}
-        type: global
         priority: 0
+        type: global

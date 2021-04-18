@@ -1,3 +1,4 @@
 name: default
 permissions:
-- worldguard.region.claim
+- keepitems.keepxp
+- AutoPickup.enabled

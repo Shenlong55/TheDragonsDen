@@ -74,11 +74,11 @@ timings:
   - database
   - settings.bungeecord-addresses
   - settings.velocity-support.secret
-  history-interval: 300
-  history-length: 3600
-  server-name: Unknown Server
+  history-interval: 180
+  history-length: 2160
+  server-name: The Dragon's Den
   server-name-privacy: false
-  verbose: true
+  verbose: false
 world-settings:
   default:
     all-chunks-are-slime-chunks: false
@@ -119,7 +119,7 @@ world-settings:
     auto-save-interval: -1
     baby-zombie-movement-modifier: 0.5
     bed-search-radius: 1
-    container-update-tick-rate: 4
+    container-update-tick-rate: 3
     count-all-mobs-for-spawning: false
     creative-arrow-despawn-rate: 60
     delay-chunk-unloads-by: 10s
@@ -188,7 +188,7 @@ world-settings:
     grass-spread-tick-rate: 4
     hopper:
       cooldown-when-full: true
-      disable-move-event: false
+      disable-move-event: true
     iron-golems-can-spawn-in-air: false
     keep-spawn-loaded: false
     keep-spawn-loaded-range: 10
@@ -204,7 +204,7 @@ world-settings:
       refresh-min: 30m
       reset-seed-on-fill: true
       restrict-player-reloot: true
-    max-auto-save-chunks-per-tick: 8
+    max-auto-save-chunks-per-tick: 6
     max-entity-collisions: 2
     max-growth-height:
       bamboo:

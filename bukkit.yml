@@ -30,15 +30,15 @@ settings:
   warn-on-overload: true
   world-container: worlds
 spawn-limits:
-  ambient: 10
-  animals: 10
+  ambient: 1
+  animals: 8
   monsters: 50
   water-ambient: 10
-  water-animals: 10
+  water-animals: 7
 ticks-per:
-  ambient-spawns: 4
+  ambient-spawns: 31
   animal-spawns: 400
   autosave: 6000
-  monster-spawns: 2
-  water-ambient-spawns: 4
-  water-spawns: 4
+  monster-spawns: 5
+  water-ambient-spawns: 21
+  water-spawns: 11
