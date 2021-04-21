@@ -74,8 +74,8 @@ timings:
   - database
   - settings.bungeecord-addresses
   - settings.velocity-support.secret
-  history-interval: 180
-  history-length: 2160
+  history-interval: 300
+  history-length: 3600
   server-name: The Dragon's Den
   server-name-privacy: false
   verbose: false
