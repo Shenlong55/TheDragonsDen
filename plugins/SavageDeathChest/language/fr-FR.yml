@@ -1,3 +1,12 @@
+# Language configuration file for SavageDeathChest v1.18.7
+
+############
+# Chest Info
+############
+CHEST_INFO:
+  # Custom chest inventory name
+  INVENTORY_NAME: "Coffre de la mort de %PLAYER%"
+
 #################################
 # Traduction des chaînes de temps
 #################################
@@ -21,8 +30,13 @@ TIME_STRINGS:
 # Messages personnalisés
 ########################
 # Variable substitutions:
+# Variable substitutions:
+# %EXPIRATION_DURATION%           expiration duration with seconds
+# %EXPIRATION_DURATION_MINUTES%   expiration duration without seconds
+# %PROTECTION_DURATION%           protection duration with seconds
+# %PROTECTION_DURATION_MINUTES%   protection duration without seconds
+
 # %PLAYER%        Player name of message recipient
-# %DURATION%      A time duration string
 # %OWNER%         Chest owner name (only available in messages that reference a valid chest object)
 # %KILLER%        Chest killer name (only available in messages that reference a valid chest object)
 # %VIEWER%        Chest viewer name
@@ -42,15 +56,34 @@ TIME_STRINGS:
 MESSAGES:
   CHEST_SUCCESS:
     enabled: true
-    string: '&cUn coffre contenant votre inventaire a été placé. Vous avez %DURATION% avant sa disparition.'
+    string: '&cUn coffre contenant votre inventaire a été placé. Vous avez %EXPIRATION_DURATION% avant sa disparition.'
 
   DOUBLECHEST_PARTIAL_SUCCESS:
     enabled: true
     string: '&cSeul un coffre peut être placé à l''endroit de votre mort. Certains items ont donc été éparpillés à terre.'
+    # available subs: %PLAYER%, %EXPIRATION_DURATION%, %EXPIRATION_DURATION_MINUTES%, %LOCATION%
 
-  CHEST_DENIED_PLUGIN:
+  CHEST_DEPLOYED_PROTECTION_TIME:
+    enabled: true
+    string: '&cLe coffre de la mort est protégé du pillage pendant %PROTECTION_DURATION_MINUTES%.'
+    # available subs: %OWNER%, %PROTECTION_DURATION%, %PROTECTION_DURATION_MINUTES%, %LOCATION%
+
+  CHEST_ACCESSED_PROTECTION_TIME:
+    enabled: true
+    repeat-delay: 1
+    string: '&cLe coffre de la mort appartenant à %OWNER% est protégé du pillage pendant %PROTECTION_DURATION_MINUTES%.'
+    # available subs: %OWNER%, %PROTECTION_DURATION%, %PROTECTION_DURATION_MINUTES%, %LOCATION%
+
+  CHEST_DENIED_DEPLOYMENT_BY_PLUGIN:
     enabled: true
     string: '&cL''apparition du coffre contenant l''inventaire de votre mort a été empéché par %PLUGIN%.'
+    # available subs: %PLAYER%, %PLUGIN%, %LOCATION%
+
+  CHEST_DENIED_ACCESS_BY_PLUGIN:
+    enabled: true
+    string: '&cL''accès au coffre de la mort a été empêché par %PLUGIN%.'
+    # available subs: %PLAYER%, %PLUGIN%, %LOCATION%
+
 
   CHEST_DENIED_BLOCK:
     enabled: true
@@ -139,6 +172,31 @@ MESSAGES:
     string: '&7Configuration de DeathChest rechargée.'
 
 
+  COMMAND_HELP_HELP:
+    enabled: true
+    string: '&eAffiche l''aide pour les commandes DeathChest.'
+
+  COMMAND_HELP_LIST:
+    enabled: true
+    string: '&eAffiche une liste de tous les coffres de la mort.'
+
+  COMMAND_HELP_RELOAD:
+    enabled: true
+    string: '&eRecharge la configuration.'
+
+  COMMAND_HELP_STATUS:
+    enabled: true
+    string: '&eAffiche les paramètres de configuration.'
+
+  COMMAND_HELP_INVALID:
+    enabled: true
+    string: '&eCe n''est pas une commande valide.'
+
+  COMMAND_HELP_USAGE:
+    enabled: true
+    string: '&eUtilisation de la commande:'
+
+
   LIST_HEADER:
     enabled: true
     string: '&3Page &b%PAGE_NUMBER%&3 of &b%PAGE_TOTAL%'
@@ -149,14 +207,18 @@ MESSAGES:
 
   LIST_ITEM:
     enabled: true
-    string: "%ITEM_NUMBER%) &aLocation:&b %LOCATION% \n
-    &aRemaining time:&b %DURATION% &aKiller:&b %KILLER%"
+    string: |-
+      %ITEM_NUMBER%) &aLocation:&b %LOCATION% &aKiller:&b %KILLER%
+          &aExpiration time:&b %EXPIRATION_DURATION%
+          &aProtection time:&b %PROTECTION_DURATION%
 
   LIST_ITEM_ALL:
     enabled: true
-    string: "%ITEM_NUMBER%) &aOwner:&b %OWNER% &aKiller:&b %KILLER% \n
-    &aLocation:&b %LOCATION% \n
-    &aRemaining time:&b %DURATION%"
+    string: |-
+      %ITEM_NUMBER%) &aOwner:&b %OWNER% &aKiller:&b %KILLER%
+          &aLocation:&b %LOCATION%
+          &aExpiration time:&b %EXPIRATION_DURATION%
+          &aProtection time:&b %PROTECTION_DURATION%
 
   LIST_EMPTY:
     enabled: true
