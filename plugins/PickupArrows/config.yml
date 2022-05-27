@@ -1,4 +1,5 @@
 # For help please refer to the bukkit dev page: https://dev.bukkit.org/projects/pickuparrows
+
 usePermissions: false
 pickupFrom:
   skeleton:
