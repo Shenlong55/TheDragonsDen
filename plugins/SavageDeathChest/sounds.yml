@@ -1,9 +1,23 @@
-# sound configuration file for SavageDeathChest v1.16.0-SNAPSHOT
+# sound configuration file for SavageDeathChest v1.18.7
 
 COMMAND_FAIL:
   enabled: true
   player-only: true
   sound: ENTITY_VILLAGER_NO
+  volume: 1
+  pitch: 1
+
+COMMAND_INVALID:
+  enabled: true
+  player-only: true
+  sound: ENTITY_WANDERING_TRADER_AMBIENT
+  volume: 1
+  pitch: 1
+
+COMMAND_RELOAD_SUCCESS:
+  enabled: true
+  player-only: true
+  sound: BLOCK_NOTE_BLOCK_CHIME
   volume: 1
   pitch: 1
 

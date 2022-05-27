@@ -5,22 +5,22 @@
 ############
 CHEST_INFO:
   # Custom chest inventory name
-  INVENTORY_NAME: "%PLAYER%'s Dodenkist"
+  INVENTORY_NAME: '死亡宝箱'
 
 ##############
 # Time strings
 ##############
 TIME_STRINGS:
-  DAY: 'dag'
-  DAY_PLURAL: 'dagen'
-  HOUR: 'uur'
-  HOUR_PLURAL: 'uren'
-  MINUTE: 'minuut'
-  MINUTE_PLURAL: 'minuten'
-  SECOND: 'seconde'
-  SECOND_PLURAL: 'seconden'
-  UNLIMITED: 'onbeperkt de tijd'
-  LESS_THAN_ONE: 'minder dan één'
+  DAY: '天'
+  DAY_PLURAL: '天'
+  HOUR: '时'
+  HOUR_PLURAL: '时'
+  MINUTE: '分'
+  MINUTE_PLURAL: '分'
+  SECOND: '秒'
+  SECOND_PLURAL: '秒'
+  UNLIMITED: '不限时'
+  LESS_THAN_ONE: '小于一'
 
 
 ## SIGN_TEXT and DATE_FORMAT have been moved to config.yml
@@ -55,153 +55,186 @@ TIME_STRINGS:
 MESSAGES:
   CHEST_SUCCESS:
     enabled: true
-    string: '&eJe bezittingen zijn achtergebleven in een dodenkist!'
+    string: '&c成功地放置了死亡箱. 你有 %EXPIRATION_DURATION% 来取回你的物品.'
+    # available subs: %PLAYER%, %EXPIRATION_DURATION%, %EXPIRATION_DURATION_MINUTES%, %LOCATION%
 
   DOUBLECHEST_PARTIAL_SUCCESS:
     enabled: true
-    string: '&cOmdat er niet genoeg ruimte was voor een dubbele kist, kon een deel van je bezittingen niet veiliggesteld worden.'
+    string: '&c在你的死亡地点只能放置单个箱子. 一些物品已掉落.'
     # available subs: %PLAYER%, %EXPIRATION_DURATION%, %EXPIRATION_DURATION_MINUTES%, %LOCATION%
 
   CHEST_DEPLOYED_PROTECTION_TIME:
     enabled: true
-    string: '&cDe doodskist wordt gedurende %DURATION% beschermd tegen plunderingen.'
+    string: '&c死亡宝箱在 %PROTECTION_DURATION_MINUTES% 内不会被掠夺.'
     # available subs: %OWNER%, %PROTECTION_DURATION%, %PROTECTION_DURATION_MINUTES%, %LOCATION%
 
   CHEST_ACCESSED_PROTECTION_TIME:
     enabled: true
     repeat-delay: 1
-    string: '&cDoodkist van %OWNER% wordt gedurende %PROTECTION_DURATION_MINUTES% beschermd tegen plunderingen.'
+    string: '&c属于 %OWNER% 的死亡宝箱在 %PROTECTION_DURATION_MINUTES% 内不会被抢劫.'
     # available subs: %OWNER%, %PROTECTION_DURATION%, %PROTECTION_DURATION_MINUTES%, %LOCATION%
+
+  CHEST_DENIED_PLUGIN:
+    enabled: true
+    string: '&c死亡箱的部署被 %PLUGIN% 阻止了.'
+    # available subs: %PLAYER%, %PLUGIN%, %LOCATION%
 
   CHEST_DENIED_DEPLOYMENT_BY_PLUGIN:
     enabled: true
-    string: '&cHet plaatsen van een dodenkist was niet mogelijk vanwege een conflict met %PLUGIN%.'
+    string: '&c死亡箱的部署被 %PLUGIN% 阻止了.'
     # available subs: %PLAYER%, %PLUGIN%, %LOCATION%
 
   CHEST_DENIED_ACCESS_BY_PLUGIN:
     enabled: true
-    string: '&cToegang tot de kist bij overlijden werd voorkomen door %PLUGIN%.'
+    string: '&c%PLUGIN% 阻止了对死亡宝箱的访问.'
     # available subs: %PLAYER%, %PLUGIN%, %LOCATION%
 
   CHEST_DENIED_BLOCK:
     enabled: true
-    string: '&cEr is niet genoeg ruimte om een dodenkist te plaatsen.'
+    string: '&c找不到一个来放置箱子的开放空间.'
+    # available subs: %PLAYER%, %LOCATION%
 
   CHEST_DENIED_PERMISSION:
     enabled: false
-    string: '&cJe hebt niet de benodigde rechten voor het gebruik van dodenkisten.'
+    string: '&c你没有死亡箱的权限.'
+    # available subs: %PLAYER%, %LOCATION%
 
   CHEST_DENIED_ADJACENT:
     enabled: true
-    string: '&cHet plaatsen van een dodenkist was niet mogelijk omdat er al een andere dodenkist stond.'
+    string: '&c死亡箱的部署被一个已知的相邻箱子阻止了.'
+    # available subs: %PLAYER%, %LOCATION%
 
   CHEST_DENIED_SPAWN_RADIUS:
     enabled: true
-    string: '&cHet plaatsen van een dodenkist was niet mogelijk vanwege de world spawn protection.'
+    string: '&c死亡箱的部署被世界出生点保护阻止了.'
+    # available subs: %PLAYER%, %LOCATION%
 
   CHEST_DENIED_WORLD_DISABLED:
     enabled: true
-    string: '&cDoodskisten zijn niet ingeschakeld in deze wereld.'
+    string: '&c死亡箱没有在该世界启用.'
+    # available subs: %PLAYER%, %LOCATION%
 
   CHEST_DENIED_VOID:
     enabled: true
-    string: '&cDeath chest kan niet worden ingezet in de leegte.'
+    string: '&c死亡箱无法部署在虚空中.'
+    # available subs: %PLAYER%, %LOCATION%
 
 
   INVENTORY_EMPTY:
-    enabled: false
-    string: '&cJe had geen bezittingen waarvoor een dodenkist gemaakt moest worden.'
+    enabled: true
+    string: '&c你没有背包可放在死亡箱中.'
+    # available subs: %PLAYER%, %LOCATION%
 
   INVENTORY_FULL:
     enabled: true
-    string: '&cNiet alle bezittingen kunnen worden overgezet omdat je inventaris vol is.'
+    string: '&c因为你的背包满了 一些物品无法被转移.'
+    # available subs: %PLAYER%, %LOCATION%
 
   NO_CHEST_IN_INVENTORY:
     enabled: true
-    string: '&cJe had geen kist in je inventaris.'
+    string: '&c你的背包中没有任何箱子.'
+    # available subs: %PLAYER%, %LOCATION%
 
   NOT_OWNER:
     enabled: true
-    string: '&cHé! Deze dodenkist is niet van jou.'
+    string: '&c那个死亡箱不属于你.'
+    # available subs: %PLAYER%, %LOCATION%, %OWNER%, %KILLER%
 
   CHEST_EXPIRED:
     enabled: true
-    string: '&cJe hebt de dodenkist helaas niet op tijd gevonden.'
+    string: '&c你的死亡箱已过期.'
     repeat-delay: 1
+    # available subs: %PLAYER%, %LOCATION%
 
   CREATIVE_MODE:
     enabled: true
-    string: '&cEr is geen dodenkist gemaakt omdat je in creatieve modus speelt.'
+    string: '&c创造模式背包没有保存在死亡箱中.'
+    # available subs: %PLAYER%, %LOCATION%
+
 
   NO_CREATIVE_ACCESS:
     enabled: true
-    string: '&cToegang tot dodenkisten is niet mogelijk in de creatieve speelmodus.'
+    string: '&c在创造模式下打开死亡箱是不允许的.'
+    # available subs: %PLAYER%, %LOCATION%
 
   CHEST_CURRENTLY_OPEN:
     enabled: true
-    string: '&cDeze dodenkist wordt al bekeken.'
+    string: '&c死亡箱当前已被其他玩家打开.'
+    # available subs: %PLAYER%, %LOCATION%, %OWNER%, %KILLER%, %VIEWER%
+
+  COMMAND_FAIL_INVALID_COMMAND:
+    enabled: true
+    string: '&c那不是一个有效的命令!'
+    # available subs: %PLAYER%
 
   COMMAND_FAIL_ARGS_COUNT_OVER:
     enabled: true
-    string: '&cTeveel waarden opgegeven!'
+    string: '&c参数过多!'
+    # available subs: %PLAYER%
 
   COMMAND_FAIL_HELP_PERMISSION:
     enabled: true
-    string: '&cJe hebt niet de benodigde rechten om het help-commando te kunnen gebruiken!'
+    string: '&c你没有权限来显示 DeathChest 帮助!'
+    # available subs: %PLAYER%
 
   COMMAND_FAIL_LIST_PERMISSION:
     enabled: true
-    string: '&cJe hebt niet de benodigde rechten om de lijst met dodenkisten te kunnen zien!'
+    string: '&c你没有权限来列出死亡箱!'
+    # available subs: %PLAYER%
 
   COMMAND_FAIL_LIST_OTHER_PERMISSION:
     enabled: true
-    string: '&cJe hebt niet de benodigde rechten om de dodenkisten van andere spelers te kunnen inzien!'
+    string: '&c你没有权限来列出其他玩家的死亡箱!'
+    # available subs: %PLAYER%
 
   COMMAND_FAIL_RELOAD_PERMISSION:
     enabled: true
-    string: '&cJe hebt niet de benodigde rechten om de instellingen te kunnen herladen!'
+    string: '&c你没有权限来重载 DeathChest 配置!'
+    # available subs: %PLAYER%
 
   COMMAND_FAIL_STATUS_PERMISSION:
     enabled: true
-    string: '&cJe hebt niet de benodigde rechten om de instellingen te kunnen bekijken!'
+    string: '&c你没有权限来查看 DeathChest 设定!'
+    # available subs: %PLAYER%
 
   COMMAND_SUCCESS_RELOAD:
     enabled: true
-    string: '&7Instellingen opnieuw ingeladen.'
+    string: '&7DeathChest 配置已重载.'
+    # available subs: %PLAYER%
 
 
   COMMAND_HELP_HELP:
     enabled: true
-    string: '&eGeeft hulp weer voor DeathChest-opdrachten.'
+    string: '&e列出 DeathChest 命令帮助.'
 
   COMMAND_HELP_LIST:
     enabled: true
-    string: '&eGeeft een lijst met alle doodskisten weer.'
+    string: '&e列出所有死亡箱.'
 
   COMMAND_HELP_RELOAD:
     enabled: true
-    string: '&eLaadt de configuratie opnieuw.'
+    string: '&e重载该插件的配置.'
 
   COMMAND_HELP_STATUS:
     enabled: true
-    string: '&eGeeft configuratie-instellingen weer.'
+    string: '&e显示插件配置设定.'
 
   COMMAND_HELP_INVALID:
     enabled: true
-    string: '&eDat is geen geldige opdracht.'
+    string: '&e那不是一个有效的命令.'
 
   COMMAND_HELP_USAGE:
     enabled: true
-    string: '&eCommando gebruik:'
+    string: '&e命令用法:'
 
 
   LIST_HEADER:
     enabled: true
-    string: '&3Pagina &b%PAGE_NUMBER%&3 van &b%PAGE_TOTAL%'
+    string: '&3页面 &b%PAGE_NUMBER%&3 共 &b%PAGE_TOTAL%'
 
   LIST_FOOTER:
     enabled: false
-    string: '&3Pagina &b%PAGE_NUMBER%&3 van &b%PAGE_TOTAL%'
+    string: '&3页面 &b%PAGE_NUMBER%&3 共 &b%PAGE_TOTAL%'
 
   LIST_ITEM:
     enabled: true
@@ -220,8 +253,8 @@ MESSAGES:
 
   LIST_EMPTY:
     enabled: true
-    string: '&bEr zijn geen dodenkisten om te tonen!'
+    string: '&b没有死亡箱可被列出!'
 
   LIST_PLAYER_NOT_FOUND:
     enabled: true
-    string: '&3Deze speler is onbekend!'
+    string: '&3那个玩家无法被找到!'

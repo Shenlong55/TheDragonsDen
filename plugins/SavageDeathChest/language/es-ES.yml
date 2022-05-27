@@ -1,3 +1,12 @@
+# Language configuration file for SavageDeathChest v1.18.7
+
+############
+# Chest Info
+############
+CHEST_INFO:
+  # Custom chest inventory name
+  INVENTORY_NAME: "%PLAYER%'s Cofre de la muerte"
+
 ##############
 # Time strings
 ##############
@@ -21,8 +30,13 @@ TIME_STRING:
 # Custom Messages
 #################
 # Variable substitutions:
+# Variable substitutions:
+# %EXPIRATION_DURATION%           expiration duration with seconds
+# %EXPIRATION_DURATION_MINUTES%   expiration duration without seconds
+# %PROTECTION_DURATION%           protection duration with seconds
+# %PROTECTION_DURATION_MINUTES%   protection duration without seconds
+
 # %PLAYER%        Player name of message recipient
-# %DURATION%      A time duration string
 # %OWNER%         Chest owner name (only available in messages that reference a valid chest object)
 # %KILLER%        Chest killer name (only available in messages that reference a valid chest object)
 # %VIEWER%        Chest viewer name
@@ -41,15 +55,33 @@ TIME_STRING:
 MESSAGES:
   CHEST_SUCCESS:
     enabled: true
-    string: '&cCofre de la muerte se ha desplegado con éxito. Usted tiene %DURATION% para recuperar tu artículos.'
+    string: '&cCofre de la muerte se ha desplegado con éxito. Usted tiene %EXPIRATION_DURATION% para recuperar tu artículos.'
 
   DOUBLECHEST_PARTIAL_SUCCESS:
     enabled: true
     string: '&cSólo se podía colocar un solo cofre del punto muerte.'
+    # available subs: %PLAYER%, %EXPIRATION_DURATION%, %EXPIRATION_DURATION_MINUTES%, %LOCATION%
 
-  CHEST_DENIED_PLUGIN:
+  CHEST_DEPLOYED_PROTECTION_TIME:
+    enabled: true
+    string: '&cEl cofre de la muerte está protegido del saqueo durante %PROTECTION_DURATION_MINUTES%.'
+    # available subs: %OWNER%, %PROTECTION_DURATION%, %PROTECTION_DURATION_MINUTES%, %LOCATION%
+
+  CHEST_ACCESSED_PROTECTION_TIME:
+    enabled: true
+    repeat-delay: 1
+    string: '&cEl cofre de la muerte que pertenece a %OWNER% está protegido contra el saqueo durante %PROTECTION_DURATION_MINUTES%.'
+    # available subs: %OWNER%, %PROTECTION_DURATION%, %PROTECTION_DURATION_MINUTES%, %LOCATION%
+
+  CHEST_DENIED_DEPLOYMENT_BY_PLUGIN:
     enabled: true
     string: '&cEl despliegue del cofre de la muerte fue prevenido por %PLUGIN%.'
+    # available subs: %PLAYER%, %PLUGIN%, %LOCATION%
+
+  CHEST_DENIED_ACCESS_BY_PLUGIN:
+    enabled: true
+    string: '&cEl acceso al cofre de la muerte fue impedido por %PLUGIN%.'
+    # available subs: %PLAYER%, %PLUGIN%, %LOCATION%
 
   CHEST_DENIED_BLOCK:
     enabled: true
@@ -138,6 +170,31 @@ MESSAGES:
     string: '&7Configuración del DeathChest recargada.'
 
 
+  COMMAND_HELP_HELP:
+    enabled: true
+    string: '&eMuestra ayuda para los comandos de DeathChest.'
+
+  COMMAND_HELP_LIST:
+    enabled: true
+    string: '&eMuestra la lista de todos los DeathChests.'
+
+  COMMAND_HELP_RELOAD:
+    enabled: true
+    string: '&eRecarga la configuración.'
+
+  COMMAND_HELP_STATUS:
+    enabled: true
+    string: '&eMuestra los ajustes de configuración.'
+
+  COMMAND_HELP_INVALID:
+    enabled: true
+    string: '&eEse no es un comando válido.'
+
+  COMMAND_HELP_USAGE:
+    enabled: true
+    string: '&eUso de comando:'
+
+
   LIST_HEADER:
     enabled: true
     string: '&3Page &b%PAGE_NUMBER%&3 of &b%PAGE_TOTAL%'
@@ -148,14 +205,18 @@ MESSAGES:
 
   LIST_ITEM:
     enabled: true
-    string: "%ITEM_NUMBER%) &aLocation:&b %LOCATION% \n
-    &aRemaining time:&b %DURATION% &aKiller:&b %KILLER%"
+    string: |-
+      %ITEM_NUMBER%) &aLocation:&b %LOCATION%
+          &aExpiration time:&b %EXPIRATION_DURATION% &aKiller:&b %KILLER%
+          &aProtection time:&b %PROTECTION_DURATION% &aKiller:&b %KILLER%
 
   LIST_ITEM_ALL:
     enabled: true
-    string: "%ITEM_NUMBER%) &aOwner:&b %OWNER% &aKiller:&b %KILLER% \n
-    &aLocation:&b %LOCATION% \n
-    &aRemaining time:&b %DURATION%"
+    string: |-
+      %ITEM_NUMBER%) &aOwner:&b %OWNER% &aKiller:&b %KILLER%
+          &aLocation:&b %LOCATION%
+          &aExpiration time:&b %EXPIRATION_DURATION%
+          &aProtection time:&b %PROTECTION_DURATION%
 
   LIST_EMPTY:
     enabled: true
