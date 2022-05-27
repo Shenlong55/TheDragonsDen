@@ -32,6 +32,7 @@ settings:
 spawn-limits:
   ambient: 10
   animals: 10
+  axolotls: 5
   monsters: 70
   water-ambient: 10
   water-animals: 10
@@ -40,6 +41,7 @@ ticks-per:
   ambient-spawns: 4
   animal-spawns: 400
   autosave: 6000
+  axolotl-spawns: 1
   monster-spawns: 2
   water-ambient-spawns: 4
   water-spawns: 4
