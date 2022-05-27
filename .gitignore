@@ -1,7 +1,8 @@
 /cache
+/libraries
 /logs
+/versions
 /.console_history
-/*.jar
 /banned-ips.json
 /banned-players.json
 /commands.yml
