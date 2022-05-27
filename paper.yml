@@ -1,10 +1,10 @@
 # This is the main configuration file for Paper.
 # As you can see, there's tons to configure. Some options may impact gameplay, so use
 # with caution, and make sure you know what each option does before configuring.
-# 
+#
 # If you need help with the configuration or have any questions related to Paper,
 # join us in our Discord or IRC channel.
-# 
+#
 # Discord: https://discord.gg/papermc
 # IRC: #paper @ irc.esper.net ( https://webchat.esper.net/?channels=paper ) 
 # Website: https://papermc.io/ 
@@ -12,7 +12,7 @@
 
 use-display-name-in-quit-message: false
 verbose: false
-config-version: 20
+config-version: 24
 messages:
   kick:
     authentication-servers-down: ''
@@ -30,17 +30,43 @@ settings:
     total-multiplier: 0.98
   bungee-online-mode: true
   chunk-tasks-per-tick: 1000
+  console:
+    enable-brigadier-completions: true
+    enable-brigadier-highlighting: true
   console-has-all-permissions: true
   enable-player-collisions: true
   fix-entity-position-desync: true
+  fix-target-selector-tag-completion: true
   incoming-packet-spam-threshold: 300
+  item-validation:
+    book:
+      author: 8192
+      page: 16384
+      title: 8192
+    display-name: 8192
+    loc-name: 8192
+    lore-line: 8192
+  lag-compensate-block-breaking: true
   load-permissions-yml-before-plugins: true
+  loggers:
+    deobfuscate-stacktraces: true
+  log-player-ip-addresses: true
   max-joins-per-tick: 3
   max-player-auto-save-per-tick: -1
+  packet-limiter:
+    kick-message: '&cSent too many packets'
+    limits:
+      all:
+        interval: 7.0
+        max-packet-rate: 500.0
+      PacketPlayInAutoRecipe:
+        action: DROP
+        interval: 4.0
+        max-packet-rate: 5.0
   player-auto-save-rate: -1
   region-file-cache-size: 256
   save-empty-scoreboard-teams: false
-  save-player-data: true
+  send-full-pos-for-hard-colliding-entities: true
   spam-limiter:
     recipe-spam-increment: 1
     recipe-spam-limit: 20
@@ -60,7 +86,9 @@ settings:
     allow-piston-duplication-readme: This setting controls if player should be able
       to use TNT duplication, but this also allows duplicating carpet, rails and potentially
       other items
+    perform-username-validation: true
   use-alternative-luck-formula: true
+  use-display-name-in-quit-message: false
   velocity-support:
     enabled: false
     online-mode: false
@@ -78,18 +106,25 @@ timings:
   history-length: 3600
   server-name: The Dragon's Den
   server-name-privacy: false
+  url: https://timings.aikar.co/
   verbose: false
 world-settings:
   default:
     all-chunks-are-slime-chunks: false
     allow-leashing-undead-horse: false
     allow-non-player-entities-on-scoreboards: false
+    allow-player-cramming-damage: false
     allow-using-signs-inside-spawn-protection: false
     allow-vehicle-collisions: true
     alt-item-despawn-rate:
       enabled: false
       items:
         COBBLESTONE: 300
+    anticheat:
+      obfuscation:
+        items:
+          hide-durability: false
+          hide-itemmeta: false
     anti-xray:
       chunk-edge-mode: 2
       enabled: true
@@ -108,6 +143,7 @@ world-settings:
       - emerald_ore
       - ender_chest
       lava-obscures: false
+      max-block-height: 64
       max-chunk-section-index: 3
       replacement-blocks:
       - stone
@@ -124,8 +160,30 @@ world-settings:
     creative-arrow-despawn-rate: 60
     delay-chunk-unloads-by: 10s
     despawn-ranges:
-      hard: 96
-      soft: 28
+      ambient:
+        hard: 96
+        soft: 28
+      axolotls:
+        hard: 96
+        soft: 28
+      creature:
+        hard: 96
+        soft: 28
+      monster:
+        hard: 96
+        soft: 28
+      misc:
+        hard: 96
+        soft: 28
+      underground_water_creature:
+        hard: 96
+        soft: 28
+      water_ambient:
+        hard: 96
+        soft: 28
+      water_creature:
+        hard: 96
+        soft: 28
     disable-creeper-lingering-effect: false
     disable-explosion-knockback: false
     disable-ice-and-snow: false
@@ -146,14 +204,19 @@ world-settings:
       arrow: -1
       ender_pearl: -1
       experience_orb: -1
+      fireball: -1
+      small_fireball: -1
       snowball: -1
     experience-merge-max-value: -1
     falling-block-height-nerf: 0
+    feature-seeds:
+      generate-random-seeds-for-all: false
     filter-nbt-data-from-spawn-eggs-and-related: true
     fishing-time-range:
       MaximumTicks: 600
       MinimumTicks: 100
     fix-climbing-bypassing-cramming-rule: false
+    fix-items-merging-through-walls: false
     fix-wither-targeting-bug: true
     fix-zero-tick-instant-grow-farms: true
     fixed-chunk-inhabited-time: -1
@@ -189,6 +252,7 @@ world-settings:
     hopper:
       cooldown-when-full: true
       disable-move-event: true
+      ignore-occluding-blocks: true
     iron-golems-can-spawn-in-air: false
     keep-spawn-loaded: false
     keep-spawn-loaded-range: 10
@@ -204,6 +268,8 @@ world-settings:
       refresh-min: 30m
       reset-seed-on-fill: true
       restrict-player-reloot: true
+    map-item-frame-cursor-limit: 128
+    map-item-frame-cursor-update-interval: 10
     max-auto-save-chunks-per-tick: 6
     max-entity-collisions: 2
     max-growth-height:
@@ -213,10 +279,17 @@ world-settings:
       cactus: 3
       reeds: 3
     max-leash-distance: 10.0
+    mob-effects:
+      immune-to-wither-effect:
+        wither: true
+        wither-skeleton: true
+      spiders-immune-to-poison-effect: true
+      undead-immune-to-certain-effects: true
     mob-spawner-tick-rate: 2
     mobs-can-always-pick-up-loot:
       skeletons: false
       zombies: false
+    monster-spawn-max-light-level: -1
     nether-ceiling-void-damage-height: 0
     non-player-arrow-despawn-rate: -1
     only-players-collide: false
@@ -225,6 +298,7 @@ world-settings:
     per-player-mob-spawns: true
     phantoms-do-not-spawn-on-creative-players: true
     phantoms-only-attack-insomniacs: true
+    piglins-guard-chests: true
     portal-create-radius: 16
     portal-search-radius: 128
     portal-search-vanilla-dimension-scaling: true
@@ -233,13 +307,32 @@ world-settings:
     remove-corrupt-tile-entities: false
     seed-based-feature-search: true
     should-remove-dragon: false
+    show-sign-click-command-failure-msgs-to-player: false
     skeleton-horse-thunder-spawn-chance: 0.01
     spawner-nerfed-mobs-should-jump: false
+    spawn-limits:
+      ambient: -1
+      axolotls: -1
+      creature: -1
+      monster: -1
+      underground_water_creature: -1
+      water_ambient: -1
+      water_creature: -1
+    split-overstacked-loot: true
     squid-spawn-height:
       maximum: 0.0
+    tick-rates:
+      behavior:
+        villager:
+          validatenearbypoi: -1
+      sensor:
+        villager:
+          secondarypoisensor: 40
     tnt-entity-height-nerf: 0
     tracker-update-distance: 1.0
     treasure-maps-return-already-discovered: true
+    unsupported-settings:
+      fix-invulnerable-end-crystal-exploit: true
     update-pathfinding-on-block-update: false
     use-faster-eigencraft-redstone: true
     use-vanilla-world-scoreboard-name-coloring: false
