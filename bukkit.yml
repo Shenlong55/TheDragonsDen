@@ -27,6 +27,7 @@ settings:
   shutdown-message: The Dragon's Den is closed for now.  We'll be back ASAP!
   update-folder: pendingUpdates
   use-exact-login-location: false
+  use-map-color-cache: true
   warn-on-overload: true
   world-container: worlds
 spawn-limits:
