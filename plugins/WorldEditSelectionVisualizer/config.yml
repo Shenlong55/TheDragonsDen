@@ -45,7 +45,7 @@ cuboid-top-bottom: true
 visualization:
   selection:
     fade-delay: 0
-    max-selection-size: 589824
+    max-selection-size: 1179648
     primary:
       points-distance: 0.5
       update-interval: 20
@@ -63,7 +63,7 @@ visualization:
         data: "BLUE"
   clipboard:
     fade-delay: 0
-    max-selection-size: 589824
+    max-selection-size: 1179648
     primary:
       points-distance: 1.0
       update-interval: 20
