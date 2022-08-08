@@ -158,6 +158,7 @@ dynamics:
     disable-mycelium-spread: false
     disable-vine-growth: false
     disable-rock-growth: false
+    disable-sculk-growth: false
     disable-crop-growth: false
     disable-soil-dehydration: false
     disable-coral-block-fade: false
